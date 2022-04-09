@@ -8,18 +8,17 @@ const alanKey = '29ee32de4916668c580f5060db3698e92e956eca572e1d8b807a3e2338fdd0d
 const App = ()=> {
    const [newsArticles, setNewsArticles] = useState([])
 
-    useEffect(()=>{  // To Manage side effects !
+    useEffect(()=>{  // To Manage side effects !- ComponentDidMount///Callback function + Dependincy array to determine how much time to be executed (only one time or infinetly)
       alanBtn({
         key: alanKey,
         onCommand:({command, articles})=>{
           if(command === 'newsHeadlines'){
            setNewsArticles(articles)
+           
           }
         }
       })
     }, [])
-
-    
 
     return(
       <NewsCards articles ={newsArticles}/>

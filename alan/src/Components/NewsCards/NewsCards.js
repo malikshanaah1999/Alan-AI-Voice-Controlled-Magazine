@@ -5,15 +5,19 @@ import useStyles from './Styles.js'
 
 
 
-const NewsCards = ({articles}) => {
-    const classes = useStyles()
+const NewsCards = (props) => {
+    console.log(props)
+    const news = props.articles
+    var count = 0
+  
   return (
 <Grow in>
-      <Grid className={classes.container} container alignItems='stretch' spacing={3}>
+      <Grid  container alignItems='stretch' spacing={3}>
          {
-             Object.keys(articles).map((article, i)=>(
+             Object.keys(news).map( i =>(
                  <Grid key={i} item xs={12} sm ={6} md ={4} lg ={3} style={{display:'flex'}}>
-                        <NewsCard article={article} i={i} />
+                        <NewsCard article={news} count ={count} />
+                        {count++}
                  </Grid>
              ))
          }

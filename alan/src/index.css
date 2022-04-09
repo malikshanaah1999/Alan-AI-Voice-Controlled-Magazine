@@ -6,7 +6,7 @@ html{
 }
 body{
     margin: 0;
-    background-color: rgb(70, 68, 100);
+    background-color: rgb(207, 206, 214);
 }
 *{
     box-sizing: border-box; /*tells the browser to account for any border or padding in the values you specifies for an element */
